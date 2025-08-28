@@ -1,5 +1,6 @@
 from stats import get_word_count
 from stats import get_character_count
+from stats import get_character_list
 
 def get_book_text(file_path:str):
     book_contents = ""
@@ -15,6 +16,8 @@ def main():
     number_of_words = get_word_count(book_contents)
     print(number_of_words, "words found in the document")
     character_dict = get_character_count(book_contents)
-    print(character_dict)
+    #print(character_dict)
+    character_list = get_character_list(character_dict)
+    print(character_list)
 
 main()
