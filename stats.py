@@ -3,7 +3,7 @@ def get_word_count(contents:str):
     number_of_words = len(words)
     return number_of_words
 
-def get_character_count(contents:str):
+def get_character_counts(contents:str):
     characters = {}
     for char in contents.lower():
         if char in characters:
@@ -19,9 +19,9 @@ CHAR = "character"
 def sort_on_count(dict):
     return dict[COUNT]
 
-# turn dictionary of characters into list
-# of dictionaries
-def get_character_list(characters_dict):
+### takes dictionary of characters returns
+### sorted list of dictionaries
+def sort_character_counts(characters_dict):
     character_list = []
     for key in characters_dict:
         char = {CHAR : key, COUNT : characters_dict[key]}
